@@ -7,9 +7,9 @@ import (
 )
 
 func main() {
+	//From current directory, read config.yml file (ignore yml extension)
 	viper.AddConfigPath(".")
 	viper.SetConfigName("config")
-
 	if err := viper.ReadInConfig(); err != nil {
 		log.Fatal("Error in reading config", err)
 	}
