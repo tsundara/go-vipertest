@@ -2,4 +2,5 @@ database:
   connectionUri: "database connection uri"
 
 server:
+  host: "localhost"
   port: 8080
