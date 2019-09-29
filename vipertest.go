@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/spf13/viper"
@@ -15,13 +14,13 @@ func main() {
 		log.Fatal("Error in reading config", err)
 	}
 
-	//Get a value from the config.yml
+	//Get a value from config.yml
 	myport := viper.Get("server.port")
-	fmt.Println("Value:", myport)
+	log.Println("Port number is :", myport)
 
 	//Get a value from Environment variables
 	viper.AutomaticEnv()
 	mypath := viper.Get("PATH")
-	fmt.Println("gopath:", mypath)
+	log.Println("PATH is :", mypath)
 
 }
